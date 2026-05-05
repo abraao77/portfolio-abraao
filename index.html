@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <!--Escolher tema-->
+    <button id="tema-bt">🎨 Mudar tema</button>
+
+    <!--Essa parte só aparece no celular-->
+    <button id="menu-bt">☰ Menu</button>
+
+    <!--menu de selecão-->
+
+    <nav id="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#formacao">Formação</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <!--Sobre mim = informações pessoais, hobbies, apresentação.-->
+
+    <section id="sobre">
+      <h1>Sobre mim</h1>
+      <div class="sobre-conteudo">
+        <img
+          src="images/eb24325c-b54d-4769-bcd4-757b42f46c37.jpg"
+          alt="Minha foto"
+        />
+        <div class="texto-sobre">
+          <p>
+            Meu nome é Abraão, tenho 24 anos gosto de tecnologia, programação e
+            academia. Tenho dois gatos e moro em um apartamento no sul de Santa
+            Catarina com minha namorada Nicole. <br /><br />
+            Venho em um processo de transição de carreira, visando me desafiar e
+            encontrar formas de crescer profissionalmente com cursos e
+            graduações
+            <br /><br />
+            Sou um profissional capacitado em banco de dados, tendo vasta
+            experiência no banco de dados Firebird e MYSQL
+          </p>
+          <p>
+            No meu tempo livre gosto de cuidar das minhas plantas e tomar
+            sorvete na praia com minha namorada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Formação: cursos, idiomas, formação educacional mais recente. -->
+
+    <section id="formacao">
+      <h1>Formação</h1>
+      <h2>Graduações</h2>
+      <p>Cursando Data Science na Uninter</p>
+      <h2>Idiomas</h2>
+      <p>Inglês Nível B2</p>
+      <h2>Cursos</h2>
+      <ul>
+        <li>Curso SQL Server Completo - Formação DBA | Udemy</li>
+        <li>Python - Banco de Dados, ETL Avançado e Automação Web + GitHub | Asimov Academy</li>
+        <li>SQL Completo com Google BigQuery Para Análise de Dados | Udemy</li>
+        <li>Engenharia de Dados com Databricks, Spark e PySpark | Udemy</li>
+        <li>Power BI do básico ao avançado | Prime Cursos</li>
+        <li>Programação e Desenvolvimento: Conhecimentos médio em Python eJavaScript.</li>
+        <li>Controle de Versão e Cloud Computing: Git e Azure.</li>
+      </ul>
+    </section>
+
+    <!--Portfólio: links para trabalhos já realizados.-->
+
+    <section id="portfolio">
+      <h1>Meu Portfólio</h1>
+      <div class="projeto">
+        <h2>Dashboard de Vendas</h2>
+        <p>
+          Projeto em Power BI com indicadores de faturamento, lucro e metas.
+        </p>
+      </div>
+      <div class="projeto">
+        <h2>Análise de Clientes</h2>
+        <p>Python + Pandas para identificar padrões de compra e retenção.</p>
+      </div>
+      <div class="projeto">
+        <h2>Banco de Dados E-commerce</h2>
+        <p>Modelagem SQL Server com tabelas de clientes, pedidos e produtos.</p>
+      </div>
+      <div class="projeto">
+        <h2>Automação de Relatórios</h2>
+        <p>Script Python para gerar relatórios automáticos em Excel.</p>
+      </div>
+    </section>
+
+    <!--Contato: formulário com campos nome, e-mail e mensagem (validação obrigatória em 
+    JavaScript e simulação do envio). .-->
+
+    <section id="contato">
+      <form action="#" method="post">
+        <h1>Contato</h1>
+        <h3>Nome</h3>
+        <input 
+          type="text" 
+          name="nome" 
+          required 
+          placeholder="Digite seu nome" 
+          title="Digite seu nome completo, sem abreviações."
+        />
+        <h3>E-mail</h3>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Digite seu E-mail"
+          title="Digite o seu melhor E-mail"
+        />
+        <h3>Mensagem</h3>
+        <textarea
+          id="Mensagem"
+          name="Mensagem"
+          rows="4"
+          cols="50"
+          required
+          placeholder="Motivo do contato"
+          title="Evite caracteres"
+        ></textarea>
+        <br><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    <script src="script/script.js"></script>
+  </body>
+</html>

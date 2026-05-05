@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* ------links---------*/
+
+/* botão escondido no PC */
+#menu-bt {
+  display: none;
+}
+
+nav {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8.5%;
+    font-size: 19px;
+}
+nav a {
+    color: #d5d7ce;
+    text-decoration: none;
+    margin-right: 15px;
+
+}
+nav a:hover {
+    color: #fff;
+}
+nav a:active {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* ------Dark mode---------*/
+
+#tema {
+    margin: 10px;
+    position: relative;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body.dark section {
+    background: #1e1e1e;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark ul,
+body.dark p {
+    color: #fff;
+}
+
+/* ------Sobre mim---------*/
+
+#sobre h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    color: #1e3a5f;
+    border-left: 6px solid #1e3a5f;
+    padding-left: 15px;
+    transition: 0.3s;
+}
+#sobre h1:hover {
+    transform: translateX(10px);
+}
+.sobre-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+.sobre-conteudo img {
+    width: 440px;
+    border-radius: 10px;
+    animation: entrarEsquerda 1.2s ease-out;
+}
+.texto-sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: clamp(20px, 5vw, 20px);
+}
+
+/* ------Entre sections---------*/
+
+section {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background-color: #f4f4f4;
+}
+
+/* ------Formações e cursos---------*/
+
+#formacao {
+    border-radius: 15px;
+    font-family: Arial, sans-serif;
+}
+#formacao h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    color: #1e3a5f;
+    border-left: 6px solid #1e3a5f;
+    padding-left: 15px;
+    transition: 0.3s;
+}
+#formacao h1:hover {
+    transform: translateX(10px);
+}
+#formacao h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #1e3a5f;
+    margin-top: 8px;
+}
+#formacao p {
+    font-size: 22px;
+    line-height: 1.8;
+}
+#formacao li {
+    margin-bottom: 10px;
+}
+
+/* ------Portfolio---------*/
+
+#portfolio {
+    margin: auto;
+    padding: 50px;
+}
+
+#portfolio h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    color: #1e3a5f;
+    border-left: 6px solid #1e3a5f;
+    padding-left: 15px;
+    transition: 0.3s;
+}
+
+#portfolio h1:hover {
+    transform: translateX(10px);
+}
+
+.projeto {
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+}
+
+.projeto h2 {
+    margin-bottom: 10px;
+}
+
+/* ------Contato formulário---------*/
+
+#contato form {
+    background-color: #333;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+#contato h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+#contato h3 {
+    font-size: 16px;
+    width: 93%;
+    margin: 0 auto 9px auto;
+    text-align: left;
+    color: #fff;
+    margin-top: 30px;
+}
+#contato input,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+form {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+#contato button {
+    width: 95%;
+    padding: 15px;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+#contato button:hover {
+    background-color: #555;
+}
+
+
+
+/* ---------- Somente celular ----------- */
+
+
+
+
+@media (max-width: 768px) {
+  /* ------links---------*/
+
+  #menu-bt {
+    display: block;
+    width: 100%;
+    padding: 5px; /*reduzo para achatar no mobile*/
+    background: black;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+  nav.ativo {
+    display: flex;
+  }
+  nav a {
+    padding: 15px;
+    border-top: 1px solid #333;
+  }
+
+  /* ------Sobre mim---------*/
+
+  .sobre-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .sobre-conteudo img {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+  }
+  .texto-sobre {
+    width: 90%;
+    font-size: 18px;
+    gap: 20px;
+  }
+  .texto-sobre p {
+    width: 100%;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ------Entre sections---------*/
+
+  section {
+    padding: 40px 5%;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+  }
+  section:nth-of-type(even) {
+    background-color: beige;
+    font-size: 20px;
+  }
+}
+
+/* ------Efeito da foto do #sobre entrando pela esquerda---------*/
+
+@keyframes entrarEsquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
